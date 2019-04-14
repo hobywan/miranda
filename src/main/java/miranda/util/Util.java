@@ -4,8 +4,8 @@ import java.io.*;
 
 public class Util {
 
-  public static String readFile(File file){
-    StringBuilder  buffer = new StringBuilder();
+  public static String readFile(File file) {
+    StringBuilder buffer = new StringBuilder();
     BufferedReader reader = null;
 
     try {
