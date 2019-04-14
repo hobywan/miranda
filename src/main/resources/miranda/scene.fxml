@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<!--<HBox spacing="10" alignment="bottom_right"-->
+<!--      GridPane.columnIndex="1" GridPane.rowIndex="4">-->
+<!--    <Button text="Sign In"-->
+<!--            onAction="#handleSubmitButtonAction"/>-->
+<!--</HBox>-->
+<!--<Text fx:id="actiontarget"-->
+<!--      GridPane.columnIndex="1" GridPane.rowIndex="6"/>-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miranda.Controller">
+   <bottom>
+      <BorderPane prefHeight="180.0" prefWidth="809.0" BorderPane.alignment="CENTER">
+         <center>
+            <Pane prefHeight="149.0" prefWidth="800.0" />
+         </center>
+         <left>
+            <VBox layoutY="20.0" prefHeight="95.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" top="5.0" />
+               </BorderPane.margin>
+               <children>
+                  <ImageView fitWidth="120.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefWidth="207.0" styleClass="description-text" text="A mi-RNA sequence analyzer.">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding></Label>
+                  <Label styleClass="description-text" text="It computes a secondary structure of the sequence">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="description-text" text="which minimizes the conformation energy,">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="description-text" text="according to Watson-Crick and Wobble  criteria.">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label styleClass="description-text" text="It uses a dynamic programming scheme.">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <GridPane prefHeight="139.0" prefWidth="401.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="132.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="56.0" minWidth="0.0" prefWidth="5.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="248.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TitledPane prefHeight="122.0" prefWidth="146.0" text="criterion">
+                     <content>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="simpleCriter" mnemonicParsing="false" text="uniform" />
+                              <RadioButton fx:id="wobbleCriter" mnemonicParsing="false" text="real" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="advancedCriter" mnemonicParsing="false" text="lookahead" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="stats" GridPane.columnIndex="2">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="92.0" prefWidth="253.0">
+                           <children>
+                              <GridPane layoutX="21.7" layoutY="20.7" prefHeight="71.0" prefWidth="258.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="119.0" />
+                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="92.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="16.0" prefWidth="120.0" text="- length:" />
+                                    <Label text="- pairs found:" GridPane.rowIndex="1" />
+                                    <Label text="- energy:" GridPane.rowIndex="2" />
+                                    <Label fx:id="lengthLabel" styleClass="stats" stylesheets="@theme.css" text="0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                                    <Label fx:id="nbPairsLabel" styleClass="stats" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="energyLabel" styleClass="stats" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.5050125313283208" prefHeight="160.0" prefWidth="200.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TitledPane animated="false" layoutX="-42.0" layoutY="-11.0" prefHeight="368.0" prefWidth="406.0" text="sequence" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="initialSequence" editable="false" layoutX="8.0" layoutY="-8.0" prefHeight="341.0" prefWidth="404.0" styleClass="text-area" text="Load nucleotide sequence here ..." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TitledPane animated="false" layoutX="-43.0" layoutY="-43.0" text="untitled" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Accordion fx:id="resultPanel" layoutX="14.0" layoutY="84.0" prefHeight="368.0" prefWidth="391.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane fx:id="patternPane" animated="false" prefHeight="367.0" prefWidth="404.0" text="pattern">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="alignedPattern" editable="false" layoutY="38.0" prefHeight="340.0" prefWidth="389.0" styleClass="result-pattern" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="matrixPane" text="energy matrix">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="energyMatrix" prefHeight="261.0" prefWidth="389.0" styleClass="result-pattern" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#openFile" text="Open" />
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" text="Close" />
+                        <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="About" />
+              </menus>
+            </MenuBar>
+            <BorderPane>
+               <top>
+                  <ToolBar prefHeight="40.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+                    <items>
+                      <Button id="button-open" fx:id="loadButton" minWidth="32.0" mnemonicParsing="false" styleClass="toolbar-buttons" stylesheets="@theme.css" text="load" />
+                        <Button id="button-run" fx:id="runButton" layoutX="10.0" layoutY="11.0" minWidth="32.0" mnemonicParsing="false" styleClass="toolbar-buttons" stylesheets="@theme.css" text="run" />
+                        <Button id="button-reset" fx:id="resetButton" layoutX="10.0" layoutY="15.0" minWidth="32.0" mnemonicParsing="false" styleClass="toolbar-buttons" stylesheets="@theme.css" text="reset" />
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="24.0" />
+                        <ImageView fitHeight="36.0" fitWidth="110.0" pickOnBounds="true" styleClass="logo">
+                           <image>
+                              <Image url="@logo.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                    </items>
+                  </ToolBar>
+               </top>
+            </BorderPane>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
