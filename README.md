@@ -1,10 +1,9 @@
 
 <img src="docs/figures/logo.png" alt="logo" width="180">
 
-**miranda** is a [mi-RNA](https://en.wikipedia.org/wiki/MicroRNA) sequence analyzer.  
+**miranda** is a [mi-RNA](https://en.wikipedia.org/wiki/MicroRNA) sequence analyzer written in Java.  
 It aims to retrieve a secondary structure of a given basis sequence  
-which minimizes the conformation energy, according to Watson-Crick and  
-Wobble criteria. 
+which minimizes the conformation energy, according to Watson-Crick and Wobble criteria. 
 
 ###### Basic principles
 
