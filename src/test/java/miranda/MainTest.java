@@ -22,14 +22,11 @@ import org.junit.Before;
 
 public class MainTest {
 
-  @Before
-  public void setUp() throws Exception { }
+  @Before public void setUp() throws Exception {}
 
-  @After
-  public void tearDown() throws Exception { }
+  @After public void tearDown() throws Exception {}
 
-  @Test
-  public void testCalculSolutionOptimale() throws Exception {
+  @Test public void testComputeSecondaryStructure() throws Exception {
 
     String sequence = "GGGAAAUCCAAUGGUACGGGGAAAUCCAAUGGUACGGGGAAAUCCAAUGG";
     sequence += "UACGGGGAAAUCCAAUGGUACGGGGAAAUCCAAUGGUACGGGGAAAUCCAAUGGUACG";
