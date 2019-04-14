@@ -24,14 +24,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<!--<HBox spacing="10" alignment="bottom_right"-->
-<!--      GridPane.columnIndex="1" GridPane.rowIndex="4">-->
-<!--    <Button text="Sign In"-->
-<!--            onAction="#handleSubmitButtonAction"/>-->
-<!--</HBox>-->
-<!--<Text fx:id="actiontarget"-->
-<!--      GridPane.columnIndex="1" GridPane.rowIndex="6"/>-->
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miranda.Controller">
    <bottom>
       <BorderPane prefHeight="180.0" prefWidth="809.0" BorderPane.alignment="CENTER">
