@@ -2,15 +2,19 @@ exclude_paths:
   - src/main/resources
   - docs
   - gradle
-  - README.md
-  - '*.gradle'
-  - '*.bat'
+  - '*.md'
+  - '**.gradle'
+  - '**.bat'
 
 engines:
   checkstyle:
     enabled: true
     language: java
+    exclude_paths:
+      - README.md
 
   pmd:
     enable: true
     language: java
+    exclude_paths:
+      - README.md
