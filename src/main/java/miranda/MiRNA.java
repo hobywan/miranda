@@ -192,6 +192,8 @@ public class MiRNA {
     ArrayList<Index> solut = new ArrayList<Index>();
     solut.add(new Index(0, size - 1));
 
+    this.nbPairs = 0;
+
     while (
         this.matched[current.x][current.y].x != 0 ||
             this.matched[current.x][current.y].y != 0
