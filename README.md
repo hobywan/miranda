@@ -2,8 +2,8 @@
 <img src="docs/figures/logo.png" alt="logo" width="180">
 
 **miranda** is a [miRNA](https://en.wikipedia.org/wiki/MicroRNA) sequence analyzer written in Java.  
-It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given basis sequence,  
-regarding the released conformation energy and the number of matched basis.  
+It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given [base](https://en.wikipedia.org/wiki/Nucleobase) sequence,  
+regarding the released conformation energy and the number of matched bases.  
 It is endowed with a graphical user interface for ease of use.
 
 [![Build Status](https://travis-ci.com/hobywan/miranda.svg?branch=master)](https://travis-ci.com/hobywan/miranda)
@@ -52,7 +52,7 @@ Related files are then located within `build/macApp` or `build/launch4j`.
 
 <img src="docs/figures/gui.png" alt="gui" width="600">
 
-1. menu to load and run a given `.txt` basis sequence file.
+1. menu to load and run a given `.txt` base sequence file.
 2. imported sequence file content.
 3. resulting secondary structure pattern after the run.
 4. conformation energy criterion used for the current run.
@@ -71,10 +71,10 @@ The conformation energy matrix used for the computation is accessible as well:
 ###### Basic background
 [DNA](https://en.wikipedia.org/wiki/DNA) and [RNA](https://en.wikipedia.org/wiki/RNA) are nucleic acids which are major macromolecules for all forms of life.  
 They differ in their chemical structure since RNA is single-stranded as opposed to DNA.  
-A [miRNA](https://en.wikipedia.org/wiki/MicroRNA) is a small non-coding RNA, which dysregulation can lead to known [diseases](https://en.wikipedia.org/wiki/MicroRNA#Disease) and cancer.  
+A [miRNA](https://en.wikipedia.org/wiki/MicroRNA) is a small [non-coding](https://en.wikipedia.org/wiki/Non-coding_RNA) RNA, which dysregulation can lead to known [diseases](https://en.wikipedia.org/wiki/MicroRNA#Disease) and cancer.  
 It tends to fold to itself while attempting to reach stability that is:
 
-- a maximal number of matched basis,
+- a maximal number of matched bases,
 - a minimal released energy induced by the conformation process.
 
 <table>
@@ -84,7 +84,7 @@ It tends to fold to itself while attempting to reach stability that is:
   </tr>
 </table>
 
-A nucleic acid [primary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Primary_structure) simply refers to its basis sequence.  
+A nucleic acid [primary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Primary_structure) simply refers to its base sequence.  
 Its [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Secondary_structure) refers to its planar conformation.  
 Its topology can be quite complex, but is simplified for miRNAs.  
 Indeed, it would consist of simple [pseudoknots](https://en.wikipedia.org/wiki/Pseudoknot)-free strand.
@@ -93,7 +93,7 @@ Indeed, it would consist of simple [pseudoknots](https://en.wikipedia.org/wiki/P
 
 **miranda** uses a [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) scheme.  
 It actually implements [Nussinov](http://math.mit.edu/classes/18.417/Slides/rna-prediction-nussinov.pdf) algorithm.  
-It relies on the computation of each basis pair energy, with 4 cases:
+It relies on the computation of each base pair energy, with 4 cases:
 
 <img src="docs/figures/nussinov.png" alt="nussinov-cases" width="420">  
 
