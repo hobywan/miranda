@@ -1,8 +1,8 @@
 
 <img src="docs/figures/logo.png" alt="logo" width="180">
 
-**miranda** is a [miRNA](https://en.wikipedia.org/wiki/MicroRNA) sequence analyzer written in Java.  
-It computes a probable [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given [base](https://en.wikipedia.org/wiki/Nucleobase) sequence,  
+**miranda** is a [nucleobase](https://en.wikipedia.org/wiki/Nucleobase) (or base) sequence analyzer written in Java.  
+It computes a probable [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given sequence,  
 regarding the released conformation energy and the number of matched bases.  
 It is endowed with a graphical user interface for ease of use.
 
@@ -117,7 +117,7 @@ The resolution algorithm involves three steps:
 
 ###### Future works
 
-Notice that computed solutions are just **candidates** for miRNA prediction.  
+Notice that computed solutions are just miRNA **candidates**.  
 I will integrate _k_ optimal and suboptimal solutions retrievals for a given _k_.  
 It will enable to consider and retrieve all isomorphic solutions.
 
