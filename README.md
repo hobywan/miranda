@@ -6,28 +6,6 @@ It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucle
 regarding the released conformation energy and the number of matched basis.  
 It is endowed with a graphical user interface for ease of use.
 
-###### Basic background
-[DNA](https://en.wikipedia.org/wiki/DNA) and [RNA](https://en.wikipedia.org/wiki/RNA) are nucleic acids which are major macromolecules for all forms of life.  
-They differ in their chemical structure since RNA is single-stranded as opposed to DNA.  
-A [miRNA](https://en.wikipedia.org/wiki/MicroRNA) is a small non-coding RNA, which dysregulation can lead to known [diseases](https://en.wikipedia.org/wiki/MicroRNA#Disease) and cancer.  
-It tends to fold to itself while attempting to reach stability that is:
-
-- a maximal number of matched basis,
-- a minimal released energy induced by the conformation process.
-
-<table>
-  <tr>
-    <td><img src="docs/figures/rna.jpg" alt="RNA" width="120"></td>
-    <td><img src="docs/figures/mirna.jpg" alt="RNA" width="250"></td>
-  </tr>
-</table>
-
-A nucleic acid [primary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Primary_structure) simply refers to its basis sequence.  
-Its [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Secondary_structure) refers to its planar conformation.  
-Its [tertiary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Tertiary_structure) refers to its spatial conformation according to geometrical and [steric](https://en.wikipedia.org/wiki/Steric_effects) constraints.  
-The conformation topology can be complex, but is simplified for miRNAs.  
-In this case, it consists of single strand without [pseudoknots](https://en.wikipedia.org/wiki/Pseudoknot).
-
 ---
 
 ### Build and use
@@ -75,18 +53,39 @@ The conformation energy matrix used for the computation is accessible as well:
 
 ### Algorithm
 
-###### In a nutshell
+###### Basic background
+[DNA](https://en.wikipedia.org/wiki/DNA) and [RNA](https://en.wikipedia.org/wiki/RNA) are nucleic acids which are major macromolecules for all forms of life.  
+They differ in their chemical structure since RNA is single-stranded as opposed to DNA.  
+A [miRNA](https://en.wikipedia.org/wiki/MicroRNA) is a small non-coding RNA, which dysregulation can lead to known [diseases](https://en.wikipedia.org/wiki/MicroRNA#Disease) and cancer.  
+It tends to fold to itself while attempting to reach stability that is:
+
+- a maximal number of matched basis,
+- a minimal released energy induced by the conformation process.
+
+<table>
+  <tr>
+    <td><img src="docs/figures/rna.jpg" alt="RNA" width="120"></td>
+    <td><img src="docs/figures/mirna.jpg" alt="RNA" width="250"></td>
+  </tr>
+</table>
+
+A nucleic acid [primary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Primary_structure) simply refers to its basis sequence.  
+Its [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Secondary_structure) refers to its planar conformation.  
+Its topology can be quite complex, but is simplified for miRNAs.  
+Indeed, it would consist of simple [pseudoknots](https://en.wikipedia.org/wiki/Pseudoknot)-free strand.
+
+###### Algorithm
 
 **miranda** uses a [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) scheme.  
 It actually implements [Nussinov](http://math.mit.edu/classes/18.417/Slides/rna-prediction-nussinov.pdf) algorithm.  
 It relies on the computation of each basis pair energy, with 4 cases:
 
-<img src="docs/figures/nussinov.png" alt="nussinov-cases" width="400">  
+<img src="docs/figures/nussinov.png" alt="nussinov-cases" width="420">  
 
 The energy of a given secondary structure is just the sum of matched pairs ones.  
 Hence an optimal conformation is an instance which minimizes this energy (which can be multiple).
 
-<img src="docs/figures/energy_total.png" alt="energy" width="500">    
+<img src="docs/figures/energy_total.png" alt="energy" width="520">    
 
 In fact, redundant recursive calls are avoided since only the three cases are taken into account.  
 The resolution algorithm involves three steps:
@@ -97,9 +96,9 @@ The resolution algorithm involves three steps:
 
 <table>
   <tr>
-    <td><img src="docs/figures/step1.png" alt="step1" width="120"></td>
-    <td><img src="docs/figures/step2.png" alt="step2" width="120"></td>
-    <td><img src="docs/figures/step3.png" alt="step3" width="120"></td>
+    <td><img src="docs/figures/step1.png" alt="step1" width="130"></td>
+    <td><img src="docs/figures/step2.png" alt="step2" width="130"></td>
+    <td><img src="docs/figures/step3.png" alt="step3" width="130"></td>
   </tr>
 </table>
 
