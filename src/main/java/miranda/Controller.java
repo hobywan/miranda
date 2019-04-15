@@ -82,7 +82,7 @@ public class Controller implements Initializable {
       reset(null);
     } catch (Exception e) {
       showStackTrace(e);
-      Platform.exit();
+      exit(null);
     }
   }
 
@@ -115,6 +115,10 @@ public class Controller implements Initializable {
     energyLabel.setText("0");
     nbPairsLabel.setText("0");
     energyMatrix.setText("");
+  }
+
+  @FXML private void exit(@SuppressWarnings("unused") ActionEvent event) {
+    Platform.exit();
   }
 
   @FXML private void execute(ActionEvent event) {
