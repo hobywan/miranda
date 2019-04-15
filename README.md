@@ -10,9 +10,16 @@ It is endowed with a graphical user interface for ease of use.
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fff486680a6b4ac8b2d0a52f38ef5dcf)](https://www.codacy.com/app/hobywan/miranda?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hobywan/miranda&amp;utm_campaign=Badge_Grade)
 [![license](https://img.shields.io/badge/license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
+
+###### Table of contents
+
+- [Build and use](#build)
+- [Feature](#feature)
+- [License](#license)
+
 ---
 
-### Build and use
+### Build and use <a name="build"></a>
 ###### Build
 
 [![Build Status](https://travis-ci.com/hobywan/miranda.svg?branch=master)](https://travis-ci.com/hobywan/miranda)
@@ -57,7 +64,7 @@ The conformation energy matrix used for the computation is accessible as well:
 
 -----
 
-### Algorithm
+### Feature <a name="feature"></a>
 
 ###### Basic background
 [DNA](https://en.wikipedia.org/wiki/DNA) and [RNA](https://en.wikipedia.org/wiki/RNA) are nucleic acids which are major macromolecules for all forms of life.  
@@ -114,7 +121,9 @@ I aim to integrate the retrieval of _k_ optimal and suboptimal solutions for a g
 It will enable to consider and retrieve all isomorphic solutions.
 
 -------
-<img src="docs/figures/logo.png" alt="logo" width="180">
+<a name="license">
+  <img src="docs/figures/logo.png" alt="logo" width="180">
+</a>
 
 ###### Copyright 2014, Hoby Rakotoarivelo
 
