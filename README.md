@@ -6,10 +6,16 @@ It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucle
 regarding the released conformation energy and the number of matched basis.  
 It is endowed with a graphical user interface for ease of use.
 
+[![Build Status](https://travis-ci.com/hobywan/miranda.svg?branch=master)](https://travis-ci.com/hobywan/miranda)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fff486680a6b4ac8b2d0a52f38ef5dcf)](https://www.codacy.com/app/hobywan/miranda?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hobywan/miranda&amp;utm_campaign=Badge_Grade)
+[![license](https://img.shields.io/badge/license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 ---
 
 ### Build and use
 ###### Build
+
+[![Build Status](https://travis-ci.com/hobywan/miranda.svg?branch=master)](https://travis-ci.com/hobywan/miranda)
 
 **miranda** is cross-platform.   
 It requires a recent Java Runtime Environment installed.  
