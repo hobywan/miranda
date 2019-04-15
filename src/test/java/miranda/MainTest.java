@@ -16,15 +16,10 @@
 
 package miranda;
 
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.After;
-import org.junit.Before;
 
 public class MainTest {
-
-  @Before public void setUp() throws Exception {}
-
-  @After public void tearDown() throws Exception {}
 
   @Test public void testComputeSecondaryStructure() throws Exception {
 
@@ -32,8 +27,16 @@ public class MainTest {
     sequence += "UACGGGGAAAUCCAAUGGUACGGGGAAAUCCAAUGGUACGGGGAAAUCCAAUGGUACG";
 
     MiRNA structure = new MiRNA(sequence);
+    int length = structure.getLength();
+    Assert.assertTrue(length > 0);
+
     structure.setCriterion(Matching.Rule.REAL);
     structure.computeSecondaryStructure();
     System.out.println(structure);
+
+    double energy = structure.getEnergy();
+    int nbPairs   = structure.getNumberPairs();
+    Assert.assertTrue(energy > 0);
+    Assert.assertTrue(nbPairs > 0);
   }
 }
