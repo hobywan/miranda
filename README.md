@@ -14,9 +14,9 @@ It is endowed with a graphical user interface for ease of use.
 
 ###### Table of contents
 
-- [Build and use](#build)
-- [Feature](#feature)
-- [License](#license)
+- [Build instructions](#build)
+- [Feature and algorithm](#feature)
+- [License and contributions](#license)
 
 ---
 
@@ -27,8 +27,8 @@ It is endowed with a graphical user interface for ease of use.
 [![Build status](https://ci.appveyor.com/api/projects/status/9cjdc6mgnqast9nr?svg=true)](https://ci.appveyor.com/project/hobywan/miranda)
 
 **miranda** is cross-platform.   
-It requires a recent Java Runtime Environment installed.  
-It relies on [gradle](https://gradle.org) toolchain to build binaries, but it is not required to install the latter though.  
+It requires a recent Java Runtime Environment.  
+It relies on [gradle](https://gradle.org) toolchain to build binaries, but no installation is required though.  
 To build and run from sources, just open a terminal and type:
 
 ```bash
@@ -44,7 +44,7 @@ You can also create native executables for macOS and Windows:
 ./gradlew createApp       # for macOS  
 ./gradlew createExe       # for Windows
 ```
-Related files are then located within `build/macApp` or `build/launch4j`.
+> Files are then located within `build/macApp` or `build/launch4j`.
 
 ###### Using the GUI
 
@@ -62,7 +62,7 @@ The conformation energy matrix used for the computation is accessible as well:
 
 <img src="docs/figures/matrix.png" alt="matrix" width="280">
 
-> Results can then be saved by a drap-and-drop to an empty file.
+> You can save results by a drap-and-drop to a file.
 
 -----
 
