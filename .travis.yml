@@ -1,0 +1,25 @@
+dist: xenial
+sudo: false
+
+os:
+  - linux
+  - osx
+
+language: java
+
+jdk:
+  - oraclejdk11
+  - openjdk11
+
+matrix:
+  include:
+    - jdk: openjdk11
+      before_install:
+        - rm "${JAVA_HOME}/lib/security/cacerts"
+        - ln -s /etc/ssl/certs/java/cacerts "${JAVA_HOME}/lib/security/cacerts"
+
+script:
+  - ./gradlew check
+  - ./gradlew clean
+  - ./gradlew assemble
+  - ./gradlew test
