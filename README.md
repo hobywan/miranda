@@ -1,7 +1,7 @@
 
 <img src="docs/figures/logo.png" alt="logo" width="180">
 
-**miranda** is a [nucleobase](https://en.wikipedia.org/wiki/Nucleobase) (or base) sequence analyzer written in Java.  
+**miranda** is a [nucleobase](https://en.wikipedia.org/wiki/Nucleobase) sequence analyzer written in Java.  
 It computes a probable [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given sequence,  
 regarding the released conformation energy and the number of matched bases.  
 It is endowed with a graphical user interface for ease of use.
