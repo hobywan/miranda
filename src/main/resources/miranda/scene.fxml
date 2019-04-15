@@ -161,7 +161,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TextArea fx:id="initialSequence" editable="false" layoutX="8.0" layoutY="-8.0" prefHeight="341.0" prefWidth="404.0" styleClass="text-area" text="Loaded base sequence will be displayed here ..." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextArea fx:id="initialSequence" editable="false" layoutX="8.0" layoutY="-8.0" prefHeight="341.0" prefWidth="404.0" styleClass="text-area" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                               <TitledPane animated="false" layoutX="-43.0" layoutY="-43.0" text="untitled" />
                            </children>
                         </AnchorPane>
@@ -177,7 +177,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <TextArea fx:id="alignedPattern" editable="false" layoutY="38.0" prefHeight="340.0" prefWidth="389.0" styleClass="result-pattern" text="Conformation pattern will be printed here ..." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <TextArea fx:id="alignedPattern" editable="false" layoutY="38.0" prefHeight="340.0" prefWidth="389.0" styleClass="result-pattern" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                         </content>
