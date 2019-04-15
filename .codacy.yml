@@ -1,0 +1,16 @@
+exclude_paths:
+  - src/main/resources
+  - docs
+  - gradle
+  - '*.md'
+  - '*.gradle'
+  - '*.bat'
+
+engines:
+  checkstyle:
+    enabled: true
+    language: java
+
+  pmd:
+    enable: true
+    language: java
