@@ -93,6 +93,8 @@ public class Controller implements Initializable {
     if (file != null) {
       String content = Util.readFile(file);
       initialSequence.setText(content);
+      int length = initialSequence.getLength();
+      lengthLabel.setText(String.valueOf(length));
       try {
         this.model.setSequence(content);
       } catch (Exception e) {
