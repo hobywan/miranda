@@ -11,15 +11,12 @@ javafx {
 
 launch4j {
     mainClassName = 'miranda.Main'
-    outfile = 'miranda.exe'
 }
 
 macAppBundle {
     mainClassName = 'miranda.Main'
 }
 
-version '1.0'
-sourceCompatibility = 1.8
 
 repositories {
     mavenLocal()
@@ -33,10 +30,6 @@ dependencies {
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
 
-tasks {
-    createExe
-}
-
 test {
     testLogging {
         showStandardStreams = true
@@ -47,4 +40,6 @@ apply plugin: 'application'
 apply plugin: 'edu.sc.seis.launch4j'
 apply plugin: 'edu.sc.seis.macAppBundle'
 
+version '1.0'
+sourceCompatibility = 1.8
 mainClassName = 'miranda.Main'
