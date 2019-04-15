@@ -69,7 +69,7 @@
 }
 
 .text-area, .stats {
-    -fx-font-size: 9pt;
+    -fx-font-size: 8pt;
     -fx-light-text-color: #99b3e6;
     -fx-mid-text-color:   #99b3e6;
     -fx-dark-text-color:  #99b3e6;
