@@ -39,7 +39,7 @@
     -fx-selection-bar-non-focused: rgb(50, 50, 50);
 
     -fx-font-size: 10pt;
-    -fx-font-family: "Lucida Sans";
+    -fx-font-family: "Helvetica";
 }
 
 /* Fix derived prompt color for text fields */
@@ -87,6 +87,7 @@
 .dialog-pane .label, .description-text {
     -fx-font-size: 9pt;
     -fx-font-family: "Lucida Sans";
+    -fx-text-fill: derive(-fx-base, 60%);
 }
 
 .dialog-pane:header .header-panel {
