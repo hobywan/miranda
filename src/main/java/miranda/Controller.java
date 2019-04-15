@@ -119,7 +119,6 @@ public class Controller implements Initializable {
 
   @FXML private void exit(@SuppressWarnings("unused") ActionEvent event) {
     Platform.exit();
-    System.exit(0);
   }
 
   @FXML private void execute(ActionEvent event) {
