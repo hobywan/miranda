@@ -63,12 +63,13 @@ public class MiRNA {
   }
 
   public void setSequence(String sequence) throws InvalidSequenceException {
-    this.sequence = ArrayUtils.toObject(sequence.toCharArray());
-    if (this.sequence != null && this.isValid()) {
-      this.size = this.sequence.length;
-      this.score = 0;
-      this.nbPairs = 0;
 
+    this.sequence = ArrayUtils.toObject(sequence.toCharArray());
+    this.size     = this.sequence.length;
+    this.score    = 0;
+    this.nbPairs  = 0;
+
+    if (this.isValid()) {
       // pattern array initialization
       this.pattern = new Character[size];
       for (int i = 0; i < size; i++) {
