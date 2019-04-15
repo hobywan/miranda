@@ -27,24 +27,22 @@ It is endowed with a graphical user interface for ease of use.
 [![Build status](https://ci.appveyor.com/api/projects/status/9cjdc6mgnqast9nr?svg=true)](https://ci.appveyor.com/project/hobywan/miranda)
 
 **miranda** is cross-platform.   
-It requires a recent Java Runtime Environment.  
-It relies on [gradle](https://gradle.org) toolchain to build binaries, but no installation is required though.  
+It requires a [recent](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Java Runtime Environment.  
+It relies on [gradle](https://gradle.org) toolchain to build binaries, but it is self-managed though.  
 To build and run from sources, just open a terminal and type:
 
 ```bash
-./gradlew clean
-./gradlew build
-./gradlew run
+./gradlew run             # on macOS or Linux
+gradlew.bat run           # on Windows
 ```
-> Use `gradlew.bat` instead on Windows.
 
-You can also create executables for macOS and Windows:
+If you want to create executables, type:
 
 ```bash
-./gradlew createApp       # for macOS  
-./gradlew createExe       # for Windows
+./gradlew createApp       # on macOS  
+gradlew.bat createExe     # on Windows
 ```
-> Files are then located within `build/macApp/` or `build/launch4j/`.
+> Files will be located within `build/macApp/` or `build/launch4j/`.
 
 ###### Using the GUI
 
