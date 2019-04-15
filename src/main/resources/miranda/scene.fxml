@@ -76,7 +76,7 @@
                         <Insets left="10.0" right="10.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="description-text" text="Copyright 2014, Hoby Rakotoarivelo">
+                  <Label styleClass="description-text" text="copyright 2014, Hoby Rakotoarivelo">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
