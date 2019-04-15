@@ -29,7 +29,7 @@ class Matching {
         || (a == 'G' && b == 'U') || (a == 'U' && b == 'G');
   }
 
-  static double getPairEnergy(char a, char b, Rule mode) {
+  public static double getPairEnergy(char a, char b, Rule mode) {
     switch (mode) {
       case UNIFORM:
         return getUniformPairEnergy(a, b);
@@ -59,7 +59,7 @@ class Matching {
   }
 
   // successive pattern score
-  static double getLookaheadPairEnergy(char a1, char b1, char a2, char b2) {
+  private static double getLookaheadPairEnergy(char a1, char b1, char a2, char b2) {
 
     if (a1 == 'A' && b1 == 'U') {
       if (a2 == 'A' && b2 == 'U') return 0.9;

@@ -46,22 +46,22 @@ public class MiRNA {
   // matching criterion used
   private Matching.Rule mode;
 
-  MiRNA() {
+  public MiRNA() {
     this.size = 0;
     this.nbPairs = 0;
     this.score = 0;
     this.mode = Matching.Rule.REAL;
   }
 
-  MiRNA(String sequence) throws Exception {
+  public MiRNA(String sequence) throws Exception {
     setSequence(sequence);
   }
 
-  void setCriterion(Matching.Rule mode) {
+  public void setCriterion(Matching.Rule mode) {
     this.mode = mode;
   }
 
-  void setSequence(String sequence) throws Exception {
+  public void setSequence(String sequence) throws Exception {
     this.sequence = ArrayUtils.toObject(sequence.toCharArray());
     if (this.isValid()) {
       this.size = this.sequence.length;
@@ -88,7 +88,7 @@ public class MiRNA {
     }
   }
 
-  boolean isValid() {
+  public boolean isValid() {
     for (char current : this.sequence) {
       if (current != 'A' && current != 'U' &&
           current != 'C' && current != 'G') {
@@ -132,10 +132,12 @@ public class MiRNA {
 
   // compute the secondary structure related to the nucleotide
   // sequence. It fills the released energy matrix.
-  void computeSecondaryStructure() {
+  public void computeSecondaryStructure() {
 
     int col;
-    double S1, S2, S3;
+    double S1;
+    double S2;
+    double S3;
 
     // 1. Initialization
     // A basis cannot be matched neither with itself nor with a direct neighbor.
@@ -212,7 +214,7 @@ public class MiRNA {
 
   }
 
-  String printEnergyMatrix() {
+  public String printEnergyMatrix() {
     StringBuilder s = new StringBuilder();
     Locale.setDefault(new Locale("en", "US", "MAC"));
     DecimalFormat formatter = new DecimalFormat("#0.0");
@@ -242,7 +244,7 @@ public class MiRNA {
     return s.toString();
   }
 
-  String printMatchingMatrix() {
+  public String printMatchingMatrix() {
     StringBuilder s = new StringBuilder();
 
     for (int i = 0; i < size; i++) {
@@ -266,24 +268,24 @@ public class MiRNA {
     return s.toString();
   }
 
-  String getPattern() {
+  public String getPattern() {
     StringBuilder s = new StringBuilder();
     for (char current : this.pattern) {
-      s.append(current); //.append(" ");
+      s.append(current);
     }
     s.append("\n");
     return s.toString();
   }
 
-  int getLength() {
+  public int getLength() {
     return this.sequence.length;
   }
 
-  int getNumberPairs() {
+  public int getNumberPairs() {
     return this.nbPairs;
   }
 
-  double getEnergy() {
+  public double getEnergy() {
     return this.score;
   }
 
