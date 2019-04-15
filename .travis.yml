@@ -11,7 +11,5 @@ jdk:
   - openjdk11
 
 script:
-  - ./gradlew check
-  - ./gradlew clean
-  - ./gradlew assemble
-  - ./gradlew test
+  - ./gradlew check --info
+  - ./gradlew clean test --info
