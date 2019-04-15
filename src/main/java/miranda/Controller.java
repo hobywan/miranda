@@ -74,8 +74,10 @@ public class Controller implements Initializable {
       advancedCriter.setToggleGroup(group);
       wobbleCriter.setSelected(true);
       advancedCriter.setDisable(true);
+
       // expand result panel
       resultPanel.setExpandedPane(patternPane);
+      reset(null);
     } catch (Exception e) {
       showStackTrace(e);
       exit(null);
@@ -105,8 +107,8 @@ public class Controller implements Initializable {
   }
 
   @FXML private void reset(@SuppressWarnings("unused") ActionEvent event) {
-    initialSequence.setText("Load nucleotide sequence here ...");
-    alignedPattern.setText("");
+    initialSequence.setText("Loaded base sequence will be displayed here ...");
+    alignedPattern.setText("Conformation pattern will be printed here ...");
     lengthLabel.setText("0");
     energyLabel.setText("0");
     nbPairsLabel.setText("0");
