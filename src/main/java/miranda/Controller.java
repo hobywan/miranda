@@ -102,7 +102,7 @@ public class Controller implements Initializable {
     }
   }
 
-  @FXML private void reset(ActionEvent event) {
+  @FXML private void reset(@SuppressWarnings("unused") ActionEvent event) {
     initialSequence.setText("Load nucleotide sequence here ...");
     alignedPattern.setText("");
     lengthLabel.setText("0");
@@ -111,7 +111,7 @@ public class Controller implements Initializable {
     energyMatrix.setText("");
   }
 
-  @FXML private void exit(ActionEvent event) {
+  @FXML private void exit(@SuppressWarnings("unused") ActionEvent event) {
     Platform.exit();
     System.exit(0);
   }
