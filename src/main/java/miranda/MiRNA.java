@@ -63,7 +63,7 @@ public class MiRNA {
 
   public void setSequence(String sequence) throws Exception {
     this.sequence = ArrayUtils.toObject(sequence.toCharArray());
-    if (this.isValid()) {
+    if (this.sequence != null && this.isValid()) {
       this.size = this.sequence.length;
       this.score = 0;
       this.nbPairs = 0;
@@ -89,14 +89,17 @@ public class MiRNA {
   }
 
   public boolean isValid() {
-    for (char current : this.sequence) {
-      if (current != 'A' && current != 'U' &&
-          current != 'C' && current != 'G') {
-        System.err.println("invalid character " + current);
-        return false;
-      }
-    }
-    return true;
+    try {
+      if (this.size > 0) {
+        for (char current : this.sequence) {
+          if (current != 'A' && current != 'U' &&
+              current != 'C' && current != 'G') {
+            return false;
+          }
+        }
+        return true;
+      } else { return false; }
+    } catch (NullPointerException e) { return false; }
   }
 
   // Retrieve the max energy value regardless of the comparison order in case of
