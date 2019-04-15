@@ -2,13 +2,14 @@
 <img src="docs/figures/logo.png" alt="logo" width="180">
 
 **miranda** is a [miRNA](https://en.wikipedia.org/wiki/MicroRNA) sequence analyzer written in Java.  
-It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given basis sequence, regarding the released conformation energy and the number of matched basis.  
+It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given basis sequence,  
+regarding the released conformation energy and the number of matched basis.  
 It is endowed with a graphical user interface for ease of use.
 
 ###### Basic background
-DNA and RNA are nucleic acids which are major macromolecules for all forms of life.  
+[DNA](https://en.wikipedia.org/wiki/DNA) and [RNA](https://en.wikipedia.org/wiki/RNA) are nucleic acids which are major macromolecules for all forms of life.  
 They differ in their chemical structure since RNA is single-stranded as opposed to DNA.  
-A miRNA is a small non-coding RNA, which dysregulation can lead to known [diseases](https://en.wikipedia.org/wiki/MicroRNA#Disease) and cancer.  
+A [miRNA](https://en.wikipedia.org/wiki/MicroRNA) is a small non-coding RNA, which dysregulation can lead to known [diseases](https://en.wikipedia.org/wiki/MicroRNA#Disease) and cancer.  
 It tends to fold to itself while attempting to reach stability that is:
 
 - a maximal number of matched basis,
@@ -21,9 +22,9 @@ It tends to fold to itself while attempting to reach stability that is:
   </tr>
 </table>
 
-RNA primary structure simply refers to its basis sequence.  
-Its secondary structure refers to its planar conformation.  
-Its ternal structure refers to its real spatial conformation.  
+A nucleic acid [primary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Primary_structure) simply refers to its basis sequence.  
+Its [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Secondary_structure) refers to its planar conformation.  
+Its [tertiary structure](https://en.wikipedia.org/wiki/Nucleic_acid_structure#Tertiary_structure) refers to its spatial conformation according to geometrical and [steric](https://en.wikipedia.org/wiki/Steric_effects) constraints.  
 The conformation topology can be complex, but is simplified for miRNAs.  
 In this case, it consists of single strand without [pseudoknots](https://en.wikipedia.org/wiki/Pseudoknot).
 
