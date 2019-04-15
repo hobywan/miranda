@@ -59,6 +59,7 @@ class Matching {
   }
 
   // successive pattern score
+  @SuppressWarnings("unused")
   private static double getLookaheadPairEnergy(char a1, char b1, char a2, char b2) {
 
     if (a1 == 'A' && b1 == 'U') {
