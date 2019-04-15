@@ -170,11 +170,10 @@ public class MiRNA {
         S2 = energy[lig + 1][col];
         S3 = energy[lig][col - 1];
         // take the max
-        Case a, b, c, max;
-        a = new Case(S1, lig + 1, col - 1);
-        b = new Case(S2, lig + 1, col);
-        c = new Case(S3, lig, col - 1);
-        max = this.maxAlea(a, b, c, lig, col);
+        Case a = new Case(S1, lig + 1, col - 1);
+        Case b = new Case(S2, lig + 1, col);
+        Case c = new Case(S3, lig, col - 1);
+        Case max = this.maxAlea(a, b, c, lig, col);
         // update energy[lig][col]
         energy[lig][col] = max.val;
       }
