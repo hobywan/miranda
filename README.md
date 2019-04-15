@@ -2,7 +2,7 @@
 <img src="docs/figures/logo.png" alt="logo" width="180">
 
 **miranda** is a [miRNA](https://en.wikipedia.org/wiki/MicroRNA) sequence analyzer written in Java.  
-It computes an optimal [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given [base](https://en.wikipedia.org/wiki/Nucleobase) sequence,  
+It computes a probable [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given [base](https://en.wikipedia.org/wiki/Nucleobase) sequence,  
 regarding the released conformation energy and the number of matched bases.  
 It is endowed with a graphical user interface for ease of use.
 
@@ -27,22 +27,22 @@ It is endowed with a graphical user interface for ease of use.
 [![Build status](https://ci.appveyor.com/api/projects/status/9cjdc6mgnqast9nr?svg=true)](https://ci.appveyor.com/project/hobywan/miranda)
 
 **miranda** is cross-platform.   
-It requires a [recent](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Java Runtime Environment.  
+It requires a [recent](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Java SE to be built from sources (at least 11).  
 It relies on [gradle](https://gradle.org) toolchain to build binaries, but it is self-managed though.  
-To build and run from sources, just open a terminal and type:
+To build and run it, just open a terminal and type:
 
 ```bash
-./gradlew run             # on macOS or Linux
-gradlew.bat run           # on Windows
+./gradlew run                 # on macOS or Linux
+gradlew.bat run               # on Windows
 ```
 
 If you want to create executables, type:
 
 ```bash
-./gradlew createApp       # on macOS  
-gradlew.bat createExe     # on Windows
+./gradlew createApp           # on macOS  
+gradlew.bat createExe         # on Windows
 ```
-> Files will be located within `build/macApp/` or `build/launch4j/`.
+> They will be located under `build/macApp` or `build/launch4j`.
 
 ###### Using the GUI
 
@@ -117,7 +117,8 @@ The resolution algorithm involves three steps:
 
 ###### Future works
 
-I aim to integrate the retrieval of _k_ optimal and suboptimal solutions for a given _k_.  
+Notice that computed solutions are just **candidates** for miRNA prediction.  
+I will integrate _k_ optimal and suboptimal solutions retrievals for a given _k_.  
 It will enable to consider and retrieve all isomorphic solutions.
 
 -------
