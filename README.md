@@ -14,9 +14,9 @@ It is endowed with a graphical user interface for ease of use.
 
 ###### Table of contents
 
-- [Build instructions](#build)
+- [Build and use instructions](#build)
 - [Feature and algorithm](#feature)
-- [License and contributions](#license)
+- [How to contribute](#license)
 
 ---
 
@@ -38,13 +38,13 @@ To build and run from sources, just open a terminal and type:
 ```
 > Use `gradlew.bat` instead on Windows.
 
-You can also create native executables for macOS and Windows:
+You can also create executables for macOS and Windows:
 
 ```bash
 ./gradlew createApp       # for macOS  
 ./gradlew createExe       # for Windows
 ```
-> Files are then located within `build/macApp` or `build/launch4j`.
+> Files are then located within `build/macApp/` or `build/launch4j/`.
 
 ###### Using the GUI
 
