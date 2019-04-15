@@ -31,6 +31,8 @@ import java.io.StringWriter;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
+
+import miranda.util.InvalidSequenceException;
 import miranda.util.Util;
 
 public class Controller implements Initializable {
@@ -99,7 +101,7 @@ public class Controller implements Initializable {
       lengthLabel.setText(String.valueOf(length));
       try {
         this.model.setSequence(content);
-      } catch (Exception e) {
+      } catch (InvalidSequenceException e) {
         reset(event);
         alertInvalidSequence();
       }

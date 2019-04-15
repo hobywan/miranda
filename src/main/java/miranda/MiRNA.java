@@ -16,6 +16,7 @@
 
 package miranda;
 
+import miranda.util.InvalidSequenceException;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.text.DecimalFormat;
@@ -61,7 +62,7 @@ public class MiRNA {
     this.mode = mode;
   }
 
-  public void setSequence(String sequence) throws Exception {
+  public void setSequence(String sequence) throws InvalidSequenceException {
     this.sequence = ArrayUtils.toObject(sequence.toCharArray());
     if (this.sequence != null && this.isValid()) {
       this.size = this.sequence.length;
@@ -84,7 +85,7 @@ public class MiRNA {
         }
       }
     } else {
-      throw new Exception("Invalid sequence");
+      throw new InvalidSequenceException("");
     }
   }
 
