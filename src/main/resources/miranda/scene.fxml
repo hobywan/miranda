@@ -57,21 +57,21 @@
                         <Image url="@logo.png" />
                      </image>
                   </ImageView>
-                  <Label prefHeight="15.0" prefWidth="238.0" styleClass="description-text" text="A miRNA sequence folding analyzer.">
+                  <Label prefHeight="15.0" prefWidth="238.0" styleClass="description-text" text="A nucleobase sequence analyzer.">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding></Label>
-                  <Label styleClass="description-text" text="It computes a secondary structure of the sequence">
+                  <Label styleClass="description-text" text="It computes a probable miRNA secondary structure">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="description-text" text="which minimizes the conformation energy.">
+                  <Label styleClass="description-text" text="regarding released conformation energy and matching size.">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="description-text" text="Notice that multiple suggested structures can be found.">
+                  <Label styleClass="description-text" text="Notice that multiple equivalent solutions can be found.">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
