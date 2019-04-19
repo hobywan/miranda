@@ -4,13 +4,14 @@
 **miranda** is a [nucleobase](https://en.wikipedia.org/wiki/Nucleobase) sequence analyzer written in Java.  
 It computes a probable [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given sequence,  
 regarding the released conformation energy and the number of matched bases.  
-It is endowed with a graphical user interface for ease of use.
+It is endowed with a graphical user interface based on [JavaFX](https://openjfx.io).
 
 [![Build Status](https://travis-ci.com/hobywan/miranda.svg?branch=master)](https://travis-ci.com/hobywan/miranda)
 [![Build status](https://ci.appveyor.com/api/projects/status/9cjdc6mgnqast9nr?svg=true)](https://ci.appveyor.com/project/hobywan/miranda)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fff486680a6b4ac8b2d0a52f38ef5dcf)](https://www.codacy.com/app/hobywan/miranda?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hobywan/miranda&amp;utm_campaign=Badge_Grade)
 [![license](https://img.shields.io/badge/license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
+<img src="docs/figures/screen.png" alt="screenshot" width="600">
 
 ###### Table of contents
 
@@ -46,19 +47,16 @@ gradlew.bat createExe         # on Windows
 
 ###### Using the GUI
 
-**miranda** is endowed with a graphical user interface:
+**miranda** embeds a simple to use graphical user interface:
 
-<img src="docs/figures/gui.png" alt="gui" width="600">
+<img src="docs/figures/use.gif" alt="gui" width="600">
 
-1. menu to load and run a given `.txt` base sequence file.
-2. imported sequence file content.
-3. resulting secondary structure pattern after the run.
-4. conformation energy criterion used for the current run.
-5. stats on the resulting secondary structure.
+It enables to:
 
-The conformation energy matrix used for the computation is accessible as well:
-
-<img src="docs/figures/matrix.png" alt="matrix" width="280">
+- import and run a given `.txt` sequence file.
+- display predicted miRNA secondary structure pattern.
+- select conformation energy criterion.
+- show stats and conformation energy matrix.
 
 > You can save results by a drap-and-drop to a file.
 
