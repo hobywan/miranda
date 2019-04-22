@@ -1,21 +1,21 @@
-
-<img src="docs/figures/logo.png" alt="logo" width="180">
-
-**miranda** is a [nucleobase](https://en.wikipedia.org/wiki/Nucleobase) sequence analyzer written in Java.  
-It computes a probable [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given sequence,  
-regarding the released conformation energy and the number of matched bases.  
-It is endowed with a graphical user interface based on [JavaFX](https://openjfx.io).
+<img src="docs/figures/logo.png" alt="logo" width="160">
 
 [![Build Status](https://travis-ci.com/hobywan/miranda.svg?branch=master)](https://travis-ci.com/hobywan/miranda)
 [![Build status](https://ci.appveyor.com/api/projects/status/9cjdc6mgnqast9nr?svg=true)](https://ci.appveyor.com/project/hobywan/miranda)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fff486680a6b4ac8b2d0a52f38ef5dcf)](https://www.codacy.com/app/hobywan/miranda?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hobywan/miranda&amp;utm_campaign=Badge_Grade)
-[![license](https://img.shields.io/badge/license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+<!--[![license](https://img.shields.io/badge/license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+-->
+
+**miranda** is a [nucleobase](https://en.wikipedia.org/wiki/Nucleobase) sequence analyzer written in Java.  
+It computes a probable [miRNA](https://en.wikipedia.org/wiki/MicroRNA) [secondary structure](https://en.wikipedia.org/wiki/Nucleic_acid_secondary_structure) from a given sequence,  
+regarding the released conformation energy and the number of matched bases.  
+It is endowed with a graphical user interface based on [JavaFX](https://openjfx.io):
 
 <img src="docs/figures/screen.png" alt="screenshot" width="600">
 
 ###### Table of contents
 
-- [Build and use instructions](#build)
+- [Build instructions](#build)
 - [Feature and algorithm](#feature)
 - [How to contribute](#license)
 
@@ -45,20 +45,20 @@ gradlew.bat createExe         # on Windows
 ```
 > They will be located under `build/macApp` or `build/launch4j`.
 
-###### Using the GUI
+###### Use
 
-**miranda** embeds a simple to use graphical user interface:
+**miranda** is very simple to use:
 
 <img src="docs/figures/use.gif" alt="gui" width="600">
 
-It enables to:
+Its user interface enables to:
 
 - import and run a given `.txt` sequence file.
 - display predicted miRNA secondary structure pattern.
 - select conformation energy criterion.
 - show stats and conformation energy matrix.
 
-> You can save results by a drap-and-drop to a file.
+> You can save results by a drag-and-drop to a file.
 
 -----
 
@@ -119,17 +119,16 @@ Notice that computed solutions are just miRNA **candidates**.
 I will integrate _k_ optimal and suboptimal solutions retrievals for a given _k_.  
 It will enable to consider and retrieve all isomorphic solutions.
 
+
 -------
-<a name="license">
-  <img src="docs/figures/logo.png" alt="logo" width="180">
-</a>
+### <a name="license">License</a>
 
 ###### Copyright 2014, Hoby Rakotoarivelo
 
 [![license](https://img.shields.io/badge/license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 **miranda** is released under the [Apache](https://www.apache.org/licenses/LICENSE-2.0) license.  
-It was written for experimental purposes, but improvements are welcome.    
+It was written for experimental purposes, and improvements are welcome.    
 To get involved, you can:
 
 -    report bugs or request features by submitting an [issue](https://github.com/hobywan/miranda/issues).
